@@ -6,3 +6,6 @@ addons:
 script:
 - cd exploreorgs
 - ./mvnw clean install
+after_success:
+- cd backend
+- ./mvnw clean heroku:deploy
