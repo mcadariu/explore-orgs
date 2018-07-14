@@ -8,4 +8,4 @@ script:
 - ./mvnw clean install
 after_success:
 - cd backend
-- mvn clean heroku:deploy
+- mvn heroku:deploy
