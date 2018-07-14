@@ -4,8 +4,7 @@ jdk: oraclejdk8
 addons:
   chrome: stable
 script:
-- cd exploreorgs
 - ./mvnw clean install
 after_success:
 - cd backend
-- mvn heroku:deploy
+- mvn -DskipTests heroku:deploy
