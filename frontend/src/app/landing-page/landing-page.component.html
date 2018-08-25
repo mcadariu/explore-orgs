@@ -5,7 +5,7 @@
   <hr class="my-4">
 </div>
 
-<div @fade-in class="form-group main-searchbox d-flex">
+<div @fade-in class="form-group d-flex">
   <input class="form-control form-control-lg" [(ngModel)]="inputOrg" (keyup)="onKey($event)" type="text" placeholder="e.g: Netflix">
-  <button type="button" class="btn btn-primary btn-lg go-button" (click)="startExploreOrgs()">Go!</button>
+  <button type="button" class="btn btn-primary btn-lg" (click)="startExploreOrgs()">Go!</button>
 </div>

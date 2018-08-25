@@ -16,7 +16,7 @@ import {animate, style, transition, trigger} from '@angular/animations';
   ]
 })
 export class LandingPageComponent {
-  inputOrg: string = '';
+  private inputOrg: string = '';
 
   constructor(private router: Router) {
 
