@@ -16,7 +16,8 @@ import {animate, style, transition, trigger} from '@angular/animations';
   ]
 })
 export class LandingPageComponent {
-  private inputOrg: string = '';
+  public inputOrg: string = '';
+  public inputNotValid: boolean = false;
 
   constructor(private router: Router) {
 
@@ -29,6 +30,10 @@ export class LandingPageComponent {
   }
 
   startExploreOrgs() {
-    this.router.navigate(['/results']);
+    if(this.inputOrg) {
+      this.router.navigate(['/results']);
+    } else {
+      this.inputNotValid = true;
+    }
   }
 }

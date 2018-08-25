@@ -25,15 +25,27 @@ describe('LandingPageComponent', () => {
 
     fixture = TestBed.createComponent(LandingPageComponent);
     component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
   it('should navigate to the next route when pressing enter in input box', () => {
-    fixture.detectChanges();
+    component.inputOrg = 'abc';
     let debugElement = fixture.debugElement.query(By.css('.form-control'));
     debugElement.triggerEventHandler('keyup', {
       keyCode: 13
     });
 
     expect(routerMock.navigate).toHaveBeenCalled();
+  });
+
+  it('should not navigate to the next route  when pressing enter while having an empty string in the input', () => {
+    let debugElement = fixture.debugElement.query(By.css('.form-control'));
+    debugElement.triggerEventHandler('keyup', {
+      keyCode: 13
+    });
+    expect(routerMock.navigate).not.toHaveBeenCalled();
+
+    fixture.detectChanges();
+    expect(debugElement.classes['is-invalid']).toBeTruthy();
   });
 });
