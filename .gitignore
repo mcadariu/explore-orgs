@@ -11,9 +11,11 @@
 # dependencies
 /node_modules
 /bower_components
+/frontend/node
 
 # IDEs and editors
 /.idea
+*.iml
 
 # misc
 /.sass-cache
@@ -67,6 +69,9 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 !/.mvn/wrapper/maven-wrapper.jar
+
+# YARN
+yarn.lock
 
 
 # End of https://www.gitignore.io/api/java,maven,angular
