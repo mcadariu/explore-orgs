@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core';
 import {LandingPageComponent} from './landing-page.component';
-import {FormsModule} from '@angular/forms';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [
-    FormsModule
+    SharedModule
   ],
   declarations: [
     LandingPageComponent
