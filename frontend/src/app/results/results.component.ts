@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
-  selector: 'results',
+  selector: 'app-results',
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.scss'],
   animations: [

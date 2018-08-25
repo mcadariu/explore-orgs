@@ -30,7 +30,7 @@ describe('LandingPageComponent', () => {
 
   it('should navigate to the next route when pressing enter in input box', () => {
     component.inputOrg = 'abc';
-    let debugElement = fixture.debugElement.query(By.css('.form-control'));
+    const debugElement = fixture.debugElement.query(By.css('.form-control'));
     debugElement.triggerEventHandler('keyup', {
       keyCode: 13
     });
@@ -39,7 +39,7 @@ describe('LandingPageComponent', () => {
   });
 
   it('should not navigate to the next route  when pressing enter while having an empty string in the input', () => {
-    let debugElement = fixture.debugElement.query(By.css('.form-control'));
+    const debugElement = fixture.debugElement.query(By.css('.form-control'));
     debugElement.triggerEventHandler('keyup', {
       keyCode: 13
     });

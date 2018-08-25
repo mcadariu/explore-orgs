@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
-  selector: 'landing-page',
+  selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss'],
   animations: [
@@ -16,21 +16,21 @@ import {animate, style, transition, trigger} from '@angular/animations';
   ]
 })
 export class LandingPageComponent {
-  public inputOrg: string = '';
-  public inputNotValid: boolean = false;
+  public inputOrg = '';
+  public inputNotValid = false;
 
   constructor(private router: Router) {
 
   }
 
   onKey(event: KeyboardEvent) {
-    if (event.keyCode == 13) {
+    if (event.keyCode === 13) {
       this.startExploreOrgs();
     }
   }
 
   startExploreOrgs() {
-    if(this.inputOrg) {
+    if (this.inputOrg) {
       this.router.navigate(['/results']);
     } else {
       this.inputNotValid = true;
