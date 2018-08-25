@@ -3,6 +3,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {Router} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {By} from '@angular/platform-browser';
 
 describe('LandingPageComponent', () => {
   let component: LandingPageComponent;
@@ -26,9 +27,13 @@ describe('LandingPageComponent', () => {
     component = fixture.componentInstance;
   });
 
-  it('should navigate to the next route when clicking enter or on the button', () => {
+  it('should navigate to the next route when pressing enter in input box', () => {
     fixture.detectChanges();
-    component.startExploreOrgs();
+    let debugElement = fixture.debugElement.query(By.css('.form-control'));
+    debugElement.triggerEventHandler('keyup', {
+      keyCode: 13
+    });
+
     expect(routerMock.navigate).toHaveBeenCalled();
   });
 });
