@@ -1,0 +1,16 @@
+<div @fade-in class="jumbotron vertical-center">
+  <h1 class="display-3">ExploreOrgs</h1>
+  <p class="lead">Using public GitHub data to give a quick impression of how software development is done at your
+    favourite organisations.</p>
+  <hr class="my-4">
+</div>
+
+<div @fade-in class="form-group d-flex flex-column">
+  <div class="d-flex flex-row">
+    <input class="form-control form-control-lg" [class.is-invalid]="inputNotValid" [(ngModel)]="inputOrg" (keyup)="onKey($event)" type="text"
+           placeholder="e.g: Netflix">
+    <button type="button" class="btn btn-primary btn-lg" (click)="startExploreOrgs()">Go!</button>
+  </div>
+  <div *ngIf="inputNotValid" class="d-flex invalid-feedback">Please input a valid organisation name.</div>
+
+</div>
