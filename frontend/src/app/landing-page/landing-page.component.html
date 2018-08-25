@@ -1,0 +1,11 @@
+<div @fade-in class="jumbotron vertical-center">
+  <h1 class="display-3">ExploreOrgs</h1>
+  <p class="lead">Using public GitHub data to give a quick impression of how software development is done at your
+    favourite organisations. #YOLO</p>
+  <hr class="my-4">
+</div>
+
+<div @fade-in class="form-group main-searchbox d-flex">
+  <input class="form-control form-control-lg" [(ngModel)]="inputOrg" (keyup)="onKey($event)" type="text" placeholder="e.g: Netflix">
+  <button type="button" class="btn btn-primary btn-lg go-button" (click)="startExploreOrgs()">Go!</button>
+</div>
