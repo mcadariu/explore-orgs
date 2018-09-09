@@ -8,6 +8,6 @@ export class ResultsService {
   constructor(private http: HttpClient) {
       this.http.get(`${environment.API_URL}/api/hello`, {responseType: 'text'}).subscribe(response => {
         console.log(response);
-      })
+      });
   }
 }
