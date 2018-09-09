@@ -7,4 +7,3 @@ public class ViewController {
         return "forward:/index.html";
     }
 }
-}
