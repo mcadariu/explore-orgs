@@ -2,10 +2,11 @@ package com.explore.orgs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan({ "com.explore.orgs.controllers"})
 public class ExploreOrgsApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(ExploreOrgsApplication.class, args);
 	}
